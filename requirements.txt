@@ -6,6 +6,6 @@ seaborn
 nltk
 flask
 requests
-ipkernel
+ipykernel
 jupyter
 pytest
