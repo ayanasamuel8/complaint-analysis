@@ -4,10 +4,8 @@ import faiss
 import pandas as pd
 import os
 import pickle
-import sys
-sys.path.append('../src')
-from config import PROCESSED_DATA_PATH
-from utils import load_data
+from src.config import PROCESSED_DATA_PATH
+from src.utils import load_data
 
 # CONFIGURABLE
 CHUNK_SIZE = 500

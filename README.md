@@ -1,29 +1,28 @@
 # 🧠 Intelligent Complaint Analysis for Financial Services
 
-This project builds a RAG-based chatbot to help internal teams at CrediTrust Financial understand customer complaints quickly and accurately. The system allows users to ask plain-English questions and receive grounded answers powered by real complaint narratives.
+This project builds a Retrieval-Augmented Generation (RAG) chatbot for CrediTrust Financial to help internal teams quickly analyze and act upon customer complaints using real narratives. Users can ask natural questions and get grounded, AI-powered answers.
 
 ---
 
 ## 💼 Business Context
 
-CrediTrust Financial is a fast-growing digital finance company operating in East Africa. It offers:
+CrediTrust Financial is a fast-growing fintech company in East Africa offering:
+💳 Credit Cards
+🧾 Personal Loans
+🛒 Buy Now, Pay Later (BNPL)
+🏦 Savings Accounts
+💸 Money Transfers
 
-* 💳 Credit Cards
-* 🧾 Personal Loans
-* 🛒 Buy Now, Pay Later (BNPL)
-* 🏦 Savings Accounts
-* 💸 Money Transfers
-
-Thousands of complaints are submitted monthly. Today, product and support teams spend hours manually reviewing this data. This tool will automate that process using AI.
+Thousands of complaints are submitted monthly. Currently, product and support teams manually review these complaints — a time-consuming process. This project uses AI to automate insights and enable proactive issue resolution.
 
 ---
 
 ## 🚀 Key Features
 
-* 🔍 Semantic Search on real complaint narratives
-* 🤖 LLM-generated insights with evidence
-* 🧱 Modular pipeline (preprocessing → chunking → embedding → RAG)
-* 💬 User-friendly chatbot interface (Gradio or Streamlit)
+* 🔍 Semantic search over real complaint narratives
+* 🤖 LLM-based question answering with source grounding
+* 🧱 Modular architecture (EDA → Chunking → Embedding → Retrieval)
+* 💬 Interactive chatbot interface for non-technical users
 
 ---
 
@@ -31,74 +30,86 @@ Thousands of complaints are submitted monthly. Today, product and support teams 
 
 ```
 project-root/
-├── README                        👈 This file
-├── requirements.txt             📦 Python dependencies
+├── README 👈 Project overview
+├── requirements.txt 📦 Python dependencies
 ├── data/
 │   ├── raw/
-│   │   └── complaints.csv       🗃️ Raw CFPB complaint data
+│   │   └── complaints.csv 🗃️ Raw CFPB complaint data
 │   └── processed/
-│       └── processed_complaints.csv  ✅ Cleaned and filtered data
+│       └── processed_complaints.csv ✅ Cleaned and filtered complaints
 ├── notebooks/
-│   └── 1.0-eda.ipynb            📊 EDA and preprocessing
-├── report/                      📸 Visualizations, screenshots
+│   └── 1.0-eda.ipynb 📊 EDA and data cleaning
+├── report/ 📄 Evaluation, screenshots, final report
 ├── src/
-│   ├── __init__.py
-│   ├── config.py                ⚙️ Configuration and constants
-│   ├── data_processing.py       🧹 Cleaning and filtering logic
-│   └── utils.py                 🔧 Helper functions
+│   ├── init.py
+│   ├── config.py ⚙️ Config and paths
+│   ├── data_processing.py 🧹 Text filtering and preprocessing
+│   ├── utils.py 🔧 Common functions
+│   └── embedding_pipeline.py 🧠 Embedding and FAISS vector indexing
 ├── tests/
-│   ├── __init__.py
-│   └── test_dummy.py            🧪 Unit test scaffolding
+│   ├── init.py
+|   └── test_dummy.py 
+│   └── test_embedding_pipeline.py 🧪 Unit tests (Pytest)
 ```
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1. 🧬 Create a virtual environment
-2. 📥 Install dependencies using `pip install -r requirements.txt`
-3. 🗂️ Place the CFPB dataset at `data/raw/complaints.csv`
-4. 📊 Run the EDA notebook to generate the cleaned dataset
-5. 🧠 Continue with chunking, embedding, and chatbot development
+* 🧬 Create and activate a virtual environment
+* 📥 Install dependencies: `pip install -r requirements.txt`
+* 🗂️ Add the `complaints.csv` dataset to `data/raw/`
+* 📊 Run the EDA notebook to clean and filter the data
+* 🧠 Run `embedding_pipeline.py` to generate and store embeddings
+* 💬 Start building the chatbot interface (Gradio/Streamlit)
 
 ---
 
-## 🛠️ Workflow Steps
+## 🛠️ Workflow Status
 
-✅ Task 1: Data cleaning and filtering
-✅ Task 2: Chunking narratives + generating embeddings
-✅ Task 3: Retrieval + LLM-powered generation
-✅ Task 4: Interactive app for internal users
+* ✅ Task 1: EDA and preprocessing
+* ✅ Task 2: Narrative chunking and embedding using FAISS
+* ⬜ Task 3: Retrieval + LLM integration with prompt engineering
+* ⬜ Task 4: Chatbot UI with source-verified answers
 
 ---
 
 ## 📦 Dependencies
 
-* `pandas`, `numpy`, `matplotlib`, `seaborn`
-* `sentence-transformers`, `faiss-cpu` or `chromadb`
-* `langchain`, `transformers`, `openai`, etc.
-* `gradio` or `streamlit` for the UI
+* pandas, numpy, matplotlib, seaborn
+* sentence-transformers, faiss-cpu, langchain
+* transformers, openai (optional), gradio or streamlit
+* pytest for testing
 
 ---
 
 ## 🧪 Testing
 
-Use `pytest` to run test files in the `tests/` directory.
+Run pytest to execute all unit tests:
+
+```
+pytest tests/
+```
+
+Covers chunking logic, embedding correctness, and FAISS index creation.
 
 ---
 
 ## 👥 Team
 
-Facilitator: Mahlet
-Team: Kerod, Rediet, Rehmet
+* Facilitator: Mahlet
+* Team: Kerod, Rediet, Rehmet
 
 ---
 
 ## 🔮 Future Improvements
 
-* ✨ Better prompt engineering
-* 🌍 Multilingual support
-* 🔁 Real-time complaint ingestion
-* ⚙️ CI/CD automation pipeline
+* ✨ Better prompt templates for answer precision
+* 🌍 Multilingual complaint support
+* 🔁 Real-time ingestion and vector updates
+* ⚙️ CI/CD setup with GitHub Actions
+* 🧾 Dashboard-style UI and advanced filtering
 
 ---
+
+If you want me to convert this to a particular format (e.g., plain text, HTML, or markdown), just let me know!

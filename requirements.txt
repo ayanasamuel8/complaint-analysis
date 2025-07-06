@@ -9,3 +9,6 @@ requests
 ipykernel
 jupyter
 pytest
+langchain 
+sentence-transformers 
+faiss-cpu
