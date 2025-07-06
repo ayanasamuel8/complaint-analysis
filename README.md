@@ -7,11 +7,11 @@ This project builds a Retrieval-Augmented Generation (RAG) chatbot for CrediTrus
 ## 💼 Business Context
 
 CrediTrust Financial is a fast-growing fintech company in East Africa offering:
-💳 Credit Cards
-🧾 Personal Loans
-🛒 Buy Now, Pay Later (BNPL)
-🏦 Savings Accounts
-💸 Money Transfers
+- 💳 Credit Cards
+- 🧾 Personal Loans
+- 🛒 Buy Now, Pay Later (BNPL)
+- 🏦 Savings Accounts
+- 💸 Money Transfers
 
 Thousands of complaints are submitted monthly. Currently, product and support teams manually review these complaints — a time-consuming process. This project uses AI to automate insights and enable proactive issue resolution.
 
