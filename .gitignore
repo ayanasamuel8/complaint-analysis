@@ -4,3 +4,4 @@ pycaches/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 .venv/
+vector_store/
