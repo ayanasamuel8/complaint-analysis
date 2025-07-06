@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-
+import sys
+sys.path.append('../src')
 def load_data(file_path: str):
     """
     Load data from a CSV file.
@@ -12,7 +13,9 @@ def load_data(file_path: str):
         pd.DataFrame: Loaded data as a DataFrame.
     """
     try:
+        print(file_path)
         data = pd.read_csv(file_path)
+        print(f"✅ Loaded {len(data)} rows from {file_path}.")
         return data
     except Exception as e:
         print(f"Error loading data: {e}")
