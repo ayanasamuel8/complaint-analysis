@@ -45,7 +45,7 @@ example_questions = [
 question = st.text_input("💬 Ask your question:", placeholder="Type your question here...")
 example = st.selectbox("📌 Or choose an example question:", [""] + example_questions)
 
-if example:
+if example and not question.strip():
     question = example
 
 col1, col2 = st.columns([1, 1])
