@@ -52,6 +52,6 @@ class GeminiGenerator:
             return response.text.strip()
             
         except Exception as e:
-            # Handle any errors during generation
-            print("❌ Error generating with Gemini:", str(e))
-            return "Error generating response."
+            # Log the error and re-raise the exception
+            logging.error("❌ Error generating with Gemini: %s", str(e))
+            raise
