@@ -16,3 +16,4 @@ bitsandbytes
 dotenv
 google-generativeai
 tabulate
+streamlit
