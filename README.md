@@ -91,6 +91,9 @@ project-root/
   * Maintain conversation history during the session
   * Clear conversation with a button
 
+  ![alt text](public/image.png)
+  ### Example interface
+
 ---
 
 ## 🛠️ Workflow Status
@@ -123,5 +126,3 @@ pytest tests/
 
 Covers chunking logic, embedding correctness, FAISS index creation, and evaluation.
 ---
-
-
