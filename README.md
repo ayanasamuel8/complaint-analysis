@@ -57,6 +57,7 @@ project-root/
 ├── tests/
 │   ├── __init__.py
 │   ├── test_dummy.py
+│   ├── test_retriever.py
 │   └── test_embedding_pipeline.py 🧪 Unit tests (Pytest)
 ├── vector_space/
 │   ├── index.faiss
