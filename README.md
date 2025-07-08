@@ -23,7 +23,7 @@ Thousands of complaints are submitted monthly. Currently, product and support te
 * 🔍 Semantic search over real complaint narratives
 * 🤖 LLM-based question answering with source grounding
 * 🧱 Modular architecture (EDA → Chunking → Embedding → Retrieval → Generation → Evaluation)
-* 💬 Interactive chatbot interface for non-technical users
+* 💬 Interactive chatbot interface for non-technical users with streaming answer generation and source display
 
 ---
 
@@ -34,6 +34,7 @@ project-root/
 ├── README 👈 Project overview
 ├── requirements.txt 📦 Python dependencies
 ├── .env                         # Environment variables (e.g., GEMINI_API_KEY)
+├── app.py                       # 🚀 Streamlit chatbot interface for interactive Q&A
 ├── data/
 │   ├── raw/
 │   │   └── complaints.csv 🗃️ Raw CFPB complaint data
@@ -57,6 +58,9 @@ project-root/
 │   ├── __init__.py
 │   ├── test_dummy.py
 │   └── test_embedding_pipeline.py 🧪 Unit tests (Pytest)
+├── vector_space/
+│   ├── index.faiss
+│   ├── metadata.pkl
 ```
 
 ---
@@ -73,7 +77,22 @@ project-root/
   ```
   GEMINI_API_KEY=your_actual_api_key_here
   ```
-* 💬 Start building the chatbot interface (Gradio/Streamlit) or run evaluation with `notebooks/2.0-evaluation.ipynb`
+* 🖥️ To launch the interactive chatbot interface, run:
+
+  ```
+  streamlit run app.py
+  ```
+
+  This interface allows users to:
+
+  * Type or select example questions
+  * Receive streamed AI-generated answers
+  * View source excerpts used by the model
+  * Maintain conversation history during the session
+  * Clear conversation with a button
+
+  ![alt text](public/image.png)
+  ### Example interface
 
 ---
 
@@ -81,8 +100,8 @@ project-root/
 
 * ✅ Task 1: EDA and preprocessing
 * ✅ Task 2: Narrative chunking and embedding using FAISS
-* ⬜ Task 3: Retrieval + LLM integration with prompt engineering
-* ⬜ Task 4: Chatbot UI with source-verified answers
+* ✅ Task 3: Retrieval + LLM integration with prompt engineering
+* ✅ Task 4: Chatbot UI with source-verified answers and streaming interface
 
 ---
 
@@ -106,3 +125,4 @@ pytest tests/
 ```
 
 Covers chunking logic, embedding correctness, FAISS index creation, and evaluation.
+---
