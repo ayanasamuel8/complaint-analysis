@@ -12,3 +12,7 @@ pytest
 langchain 
 sentence-transformers 
 faiss-cpu
+bitsandbytes
+dotenv
+google-generativeai
+tabulate
